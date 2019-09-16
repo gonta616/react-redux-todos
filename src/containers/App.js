@@ -3,11 +3,7 @@ import { connect } from 'react-redux'
 import AddTodo from '../components/AddTodo'
 import TodoList from '../components/TodoList'
 
-import {
-  addTodo,
-  deleteTodo,
-  updateTodo,
-} from '../actions'
+import todo from '../actions/todos'
 
 class App extends Component {
 
@@ -34,17 +30,17 @@ class App extends Component {
 
   addTodo(text){
     const {dispatch} = this.props;
-    dispatch(addTodo(text))
+    dispatch(todo.addTodo(text))
   }
 
   deleteTodo(key){
     const {dispatch} = this.props;
-    dispatch(deleteTodo(key))
+    dispatch(todo.deleteTodo(key))
   }
 
   toggleTodo(key){
     const {dispatch} = this.props;
-    dispatch(updateTodo(key))
+    dispatch(todo.updateTodo(key))
   }
 }
 
