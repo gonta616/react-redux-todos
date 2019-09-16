@@ -32,8 +32,8 @@ function deleteTodo(key){
   }
 }
 
-module.exports = {
+export default {
   addTodo,
   updateTodo,
-  deleteTodo,
+  deleteTodo,  
 }
